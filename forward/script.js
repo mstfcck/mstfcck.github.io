@@ -24,7 +24,7 @@ if (urlParams.has('to')) {
         const countdownElement = document.getElementById('countdown');
 
         const countdownInterval = setInterval(() => {
-            countdownElement.textContent = "Please wait " + countdownValue + " second(s)." ;
+            countdownElement.textContent = countdownValue + " second(s)" ;
             countdownValue--;
 
             if (countdownValue < 0) {
