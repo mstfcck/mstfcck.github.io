@@ -7,15 +7,13 @@ const urlMappings = new Map([
     ["mstfcckofficial-threads", "https://www.threads.net/@mstfcckofficial"],
 ]);
 
-// Check for the "to" parameter in the query string
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
 if (urlParams.has('to')) {
-    // Get the value of the "to" parameter
+
     const toValue = urlParams.get('to');
 
-    // Check if the "to" value is in the cache
     if (urlMappings.has(toValue)) {
         const redirectTo = urlMappings.get(toValue);
 
@@ -27,14 +25,12 @@ if (urlParams.has('to')) {
             countdownElement.textContent = countdownValue + " second(s)" ;
             countdownValue--;
 
-            if (countdownValue < 0) {
-                // Redirect to the matched URL when countdown reaches 0
+            if (countdownValue < 1) {
                 clearInterval(countdownInterval);
                 window.location.replace(redirectTo)
             }
         }, 1000);
     } else {
-        // Display an alert if no match found
         alert("No matching URL found for the given 'to' value.");
     }
 }
