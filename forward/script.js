@@ -25,7 +25,7 @@ if (urlParams.has('to')) {
             countdownElement.textContent = countdownValue + " second(s)" ;
             countdownValue--;
 
-            if (countdownValue < 1) {
+            if (countdownValue < 0) {
                 clearInterval(countdownInterval);
                 window.location.replace(redirectTo)
             }
