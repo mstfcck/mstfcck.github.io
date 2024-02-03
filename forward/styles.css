@@ -1,0 +1,32 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a; /* Change background color as needed */
+}
+
+.container {
+    text-align: center;
+}
+
+.countdown {
+    font-size: 4em;
+    color: #fff;
+    background-color: #3c3c3c; /* Change background color as needed */
+    padding: 20px;
+    border-radius: 10px;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
