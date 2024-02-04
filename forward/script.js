@@ -9,17 +9,17 @@ const urlMappings = new Map([
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
+const countdownElement = document.getElementById('countdown');
 
 if (urlParams.has('to')) {
 
     const toValue = urlParams.get('to');
 
     if (urlMappings.has(toValue)) {
+
         const redirectTo = urlMappings.get(toValue);
 
-        // Display the countdown before redirecting
         let countdownValue = 3;
-        const countdownElement = document.getElementById('countdown');
 
         const countdownInterval = setInterval(() => {
             countdownElement.textContent = countdownValue + " second(s)" ;
@@ -30,7 +30,11 @@ if (urlParams.has('to')) {
                 window.location.replace(redirectTo)
             }
         }, 1000);
+        
     } else {
         alert("No matching URL found for the given 'to' value.");
     }
+}
+else {
+    countdownElement.textContent = "Wrong forwarding!";
 }
