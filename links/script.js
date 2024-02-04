@@ -11,13 +11,13 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const countdownElement = document.getElementById('countdown');
 
-if (urlParams.has('to')) {
+if (urlParams.has('go')) {
 
-    const toValue = urlParams.get('to');
+    const goValue = urlParams.get('go');
 
-    if (urlMappings.has(toValue)) {
+    if (urlMappings.has(goValue)) {
 
-        const redirectTo = urlMappings.get(toValue);
+        const redirectTo = urlMappings.get(goValue);
 
         let countdownValue = 3;
 
@@ -32,7 +32,7 @@ if (urlParams.has('to')) {
         }, 1000);
         
     } else {
-        alert("No matching URL found for the given 'to' value.");
+        alert("No matching URL found for the given 'go' value.");
     }
 }
 else {
