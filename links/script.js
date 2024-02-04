@@ -36,5 +36,5 @@ if (urlParams.has('go')) {
     }
 }
 else {
-    countdownElement.textContent = "Wrong forwarding!";
+    countdownElement.textContent = "Wrong link!";
 }
