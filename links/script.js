@@ -17,7 +17,7 @@ const urlMappings = new Map([
     ["jobs-in-belgium-forem-fr-rechercher-un-metier", "https://www.leforem.be/infos-metiers/metiers"],
     
     ["jobs-in-belgium-adg-most-demand-and-shortage-occupations", "https://adg.be/desktopdefault.aspx/tabid-5401/9347_read-50919"],
-    ["jobs-in-belgium-adg-most-demand-and-shortage-occupations-list-2024", "https://adg.be/PortalData/46/Resources/dokumente/artikel-dokumente/Mangelberufe_fuer_2023-2024a.pdf"],
+    ["jobs-in-belgium-adg-most-demand-and-shortage-occupations-list-2024-pdf", "https://adg.be/PortalData/46/Resources/dokumente/artikel-dokumente/Mangelberufe_fuer_2023-2024a.pdf"],
     ["jobs-in-belgium-adg-de-arbeitsuche", "https://adg.be/desktopdefault.aspx/tabid-6166"],
 ]);
 
