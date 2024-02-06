@@ -46,7 +46,7 @@ if (urlParams.has('go')) {
         }, 1000);
         
     } else {
-        alert("No matching URL found for the given 'go' value.");
+        countdownElement.textContent = "Wrong link!";
     }
 }
 else {
