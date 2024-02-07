@@ -1,25 +1,13 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #1a1a1a;
-}
-
-.container {
-    text-align: center;
-}
 
 .countdown {
-    font-size: 3em;
+    font-size: 22px;
     color: #fff;
-    background-color: #3c3c3c;
+    background-color: #1a1a1a;
     padding: 20px;
+    margin: 10px;
     border-radius: 10px;
     animation: pulse 1s infinite alternate;
+    text-align: center;
 }
 
 @keyframes pulse {
