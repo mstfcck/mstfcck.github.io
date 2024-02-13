@@ -33,7 +33,7 @@ if (urlParams.has('go')) {
 
         const redirectTo = urlMappings.get(goValue);
 
-        let countdownValue = 3;
+        let countdownValue = 5;
 
         const countdownInterval = setInterval(() => {
             countdownElement.textContent = countdownValue + " second(s)" ;
