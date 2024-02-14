@@ -1,5 +1,4 @@
 const urlMappings = new Map([
-    ["test", "#"],
     ["mstfcckofficial-youtube", "https://www.youtube.com/@mstfcckofficial"],
     ["mstfcckofficial-instagram", "https://www.instagram.com/mstfcckofficial"],
     ["mstfcckofficial-tiktok", "https://www.tiktok.com/@mstfcckofficial"],
