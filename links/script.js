@@ -57,11 +57,16 @@ if (urlParams.has('go')) {
         }, 1000);
 
     } else {
+
+        linkElement.removeAttribute("href");
+
         linkTextElement.textContent = "Wrong link :(";
         linkTextElement.style.backgroundImage = 'linear-gradient(90deg, #ff0080, #ff5555, #ff8a00, #ff5555)';
     }
 }
 else {
+    linkElement.removeAttribute("href");
+
     linkTextElement.textContent = "Wrong link :(";
     linkTextElement.style.backgroundImage = 'linear-gradient(90deg, #ff0080, #ff5555, #ff8a00, #ff5555)';
 }
