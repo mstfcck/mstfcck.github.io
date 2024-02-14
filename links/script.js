@@ -1,4 +1,5 @@
 const urlMappings = new Map([
+    ["test", "#"],
     ["mstfcckofficial-youtube", "https://www.youtube.com/@mstfcckofficial"],
     ["mstfcckofficial-instagram", "https://www.instagram.com/mstfcckofficial"],
     ["mstfcckofficial-tiktok", "https://www.tiktok.com/@mstfcckofficial"],
@@ -23,7 +24,8 @@ const urlMappings = new Map([
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const countdownElement = document.getElementById('countdown');
+const linkElement = document.getElementById('content-link');
+const linkTextElement = document.getElementById('content-text');
 
 if (urlParams.has('go')) {
 
@@ -33,22 +35,33 @@ if (urlParams.has('go')) {
 
         const redirectTo = urlMappings.get(goValue);
 
-        let countdownValue = 5;
+        let countdownValue = 10;
 
         const countdownInterval = setInterval(() => {
-            countdownElement.textContent = countdownValue + " second(s)" ;
+            
             countdownValue--;
-
-            if (countdownValue < 0) {
+            
+            if (countdownValue <= 0) {
+                
                 clearInterval(countdownInterval);
-                window.location.replace(redirectTo)
+                
+                linkElement.setAttribute("href", redirectTo);
+                
+                linkTextElement.style.transform = 'scale(1)';
+                linkTextElement.style.animation = 'gradient 5s infinite alternate';
+                linkTextElement.style.backgroundImage = 'linear-gradient(45deg, #00d77d, #00c9ff, #00c9ff, #00d77d)';
+                linkTextElement.textContent = 'Click here to go :)';
+
             }
+
         }, 1000);
-        
+
     } else {
-        countdownElement.textContent = "Wrong link!";
+        linkTextElement.textContent = "Wrong link :(";
+        linkTextElement.style.backgroundImage = 'linear-gradient(90deg, #ff0080, #ff5555, #ff8a00, #ff5555)';
     }
 }
 else {
-    countdownElement.textContent = "Wrong link!";
+    linkTextElement.textContent = "Wrong link :(";
+    linkTextElement.style.backgroundImage = 'linear-gradient(90deg, #ff0080, #ff5555, #ff8a00, #ff5555)';
 }

@@ -1,13 +1,14 @@
-
-.countdown {
+.content-text {
     font-size: 22px;
     color: #fff;
-    background-color: #1a1a1a;
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
-    animation: pulse 1s infinite alternate;
     text-align: center;
+    animation: pulse 1s infinite alternate, gradient 3s infinite;
+    background: linear-gradient(45deg, #ff8a00, #e52e71, #2962ff, #00c9ff);
+
+    background-size: 400% 400%;
 }
 
 @keyframes pulse {
@@ -16,5 +17,17 @@
     }
     100% {
         transform: scale(1.1);
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
